@@ -36,7 +36,7 @@ end_of_week = start_of_week + dt.timedelta(days = 7)
 # Filtrare le ore eliminando la settimana corrente e stampo solo le ore comprese tra le 9 e le 19
 filtered_hours = []
 for hour in curr_month_hours:
-    if not (start_of_week <= hour < end_of_week):
+    if not (start_of_week < hour < end_of_week):
         if 9 <= hour.hour <= 19:
 
             filtered_hours.append(hour.strftime("%A %d  %b, %Y __ ora: %H:%M"))
